@@ -3,7 +3,7 @@
     <!-- <img src="./assets/logo.png"> -->
     <div class="nav">
       <ul>
-        <li v-for="item in routes" :key="item.name">{{item.name}}</li>
+        <li v-for="item in routes" :key="item.name" @click="$router.push(item.path)">{{item.name}}</li>
       </ul>
     </div>
     <div class="router-view">
@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less" >
 *{
   margin: 0;
   padding: 0;
@@ -43,10 +43,17 @@ html,body{
   height: 100%;
 }
 .nav{
-  background: #ccc;
+  background: rgb(230, 227, 227);
   height: 100%;
-  padding: 5px;
   box-sizing: border-box;
+  li{
+    line-height: 30px;
+    cursor: pointer;
+  padding: 5px 10px;
+    &:hover{
+      background: #fff;
+    }
+  }
 }
 .router-view{
   flex: 1;
