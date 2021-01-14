@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "serve": "vue-cli-service serve",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "echarts": "^4.9.0",
+    "element-ui": "^2.14.1",
     "less": "^3.13.1",
     "less-loader": "^4.1.0",
     "vue": "^2.5.2",
