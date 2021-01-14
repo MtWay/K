@@ -63,10 +63,27 @@ export default {
   mounted() {
     // initOpt()
     console.log(initData)
+    let list = initData();
     let myChart = this.$echarts.init(document.getElementById("myChart"));
+    let arr = []
     // 绘制图表
+    opt.series.data = list.map(function (item,idx) {
+            arr.push({
+                start:1,
+                end:2,
+                percent:1,
+                diff:1, 
+            })
+            return item[1];
+        }),
+        
     myChart.setOption(opt);
   },
+  methods:{
+      gsh(){
+
+      }
+  }
 };
 </script>
 <style lang="less" scoped>
